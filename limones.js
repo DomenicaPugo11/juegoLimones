@@ -98,9 +98,18 @@ function detectarPiso(){
     }
 }
 
-
- function aparecerLimon (){
+function aparecerLimon (){
     limonX=generarAleatorio(0,canvas.width-ANCHO_LIMON);
     limonY=0;
     actualizarPantalla();
+ }
+
+ function reiniciar(){
+    vidas=3;
+    puntaje=0;
+    velocidadCaida=200;
+    mostrarEnSpan("txtPuntaje",puntaje);
+    mostrarEnSpan("txtVidas",vidas);
+    clearInterval(intervalo);
+    intervalo=setInterval(bajarLimon,velocidadCaida);
  }
