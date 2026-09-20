@@ -1,31 +1,141 @@
+* {
+  box-sizing: border-box;
+  }
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #0f172a;
-  color: white;
-  text-align: center;
-  margin: 0;
-  padding: 20px;
+font-family: Arial, sans-serif;
+background: linear-gradient(135deg, #16213e, #0f3460);
+color: white;
+text-align: center;
+margin: 0;
+padding: 30px 20px;
+min-height: 100vh;
 }
 
 .contenedor {
-  max-width: 800px;
-  margin: 0 auto;
+max-width: 850px;
+margin: 0 auto;
+padding: 25px;
+background-color: rgba(15, 23, 42, 0.92);
+border: 2px solid #facc15;
+border-radius: 20px;
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.encabezado h1 {
+margin: 0 0 10px 0;
+font-size: 38px;
+color: #facc15;
+text-shadow: 2px 2px 5px #000000;
+}
+
+.encabezado p {
+margin: 8px 0;
+font-size: 18px;
+color: #e2e8f0;
+}
+
+.encabezado h2 {
+margin: 10px 0 20px 0;
+font-size: 16px;
+font-weight: normal;
+color: #94a3b8;
+}
+
+.juego {
+padding: 12px;
+background-color: #020617;
+border-radius: 15px;
+border: 2px solid #334155;
 }
 
 canvas {
-  background-color: #111827;
-  border: 3px solid #38bdf8;
-  display: block;
-  margin: 20px auto;
+background-color: #111827;
+border: 4px solid #facc15;
+border-radius: 10px;
+display: block;
+margin: 0 auto;
+max-width: 100%;
+box-shadow: 0 0 20px rgba(250, 204, 21, 0.25);
 }
 
 .panel {
-  margin: 20px 0;
+display: flex;
+justify-content: center;
+gap: 25px;
+margin: 20px 0;
+}
+
+.dato {
+min-width: 150px;
+padding: 12px 20px;
+background-color: #1e293b;
+border: 2px solid #475569;
+border-radius: 12px;
+font-size: 17px;
+}
+
+.icono {
+font-size: 20px;
+margin-right: 5px;
+}
+
+.dato strong {
+display: block;
+margin-top: 5px;
+font-size: 26px;
+color: #facc15;
+}
+
+.botones {
+display: flex;
+justify-content: center;
+gap: 12px;
+flex-wrap: wrap;
 }
 
 .botones button {
-  margin: 5px;
-  padding: 10px 16px;
-  font-size: 16px;
-  cursor: pointer;
+border: none;
+border-radius: 10px;
+padding: 12px 20px;
+font-size: 16px;
+font-weight: bold;
+color: #0f172a;
+background-color: #facc15;
+cursor: pointer;
+transition: 0.2s;
+box-shadow: 0 4px 0 #a16207;
+}
+
+.botones button:hover {
+background-color: #fde047;
+transform: translateY(-2px);
+}
+
+.botones button:active {
+transform: translateY(2px);
+box-shadow: 0 2px 0 #a16207;
+}
+
+@media (max-width: 650px) {
+body {
+padding: 15px;
+}
+
+.contenedor {
+padding: 15px;
+}
+
+.encabezado h1 {
+font-size: 28px;
+}
+
+.panel {
+gap: 10px;
+}
+
+.dato {
+min-width: 120px;
+padding: 10px;
+}
 }
