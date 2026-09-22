@@ -78,14 +78,14 @@ function detectarAtrapado(){
         if (puntaje==3){
             velocidadCaida=150 
             clearInterval(intervalo)
-            setInterval(bajarLimon,velocidadCaida)   
+            intervalo=setInterval(bajarLimon,velocidadCaida)   
         }else if (puntaje==6){
             velocidadCaida=100
             clearInterval(intervalo)
             setInterval(bajarLimon,velocidadCaida)
         }else if (puntaje==10){
             alert("Felicidades ganastes, Ahora puedes ir a vender los limones");
-            clearInterval(intervalo);
+            intervalo=clearInterval(intervalo);
         }
     }
 }
